@@ -54,7 +54,7 @@ console.log(merge(obj1, obj2))
 const obj3 = {name: 'toto'};
 const nom = 'titi'
 const setName = (ob, v) => (
-    {...ob, v}
+    {...ob, name: v}
 );
 console.log(setName(obj3, nom))
 
