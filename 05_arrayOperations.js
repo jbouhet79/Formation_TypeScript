@@ -11,6 +11,7 @@
   */
 
 const multiplyByTwo = null;
+const res = multiplyByTwo.map(*2);
 
 
 /**

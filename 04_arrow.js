@@ -20,9 +20,8 @@ let arrow1 = (a) => {
  *   - le mot clée "return" est interdis
  */
 
-let arrow2 = (b) => {
-    b=b+1;
-}
+let arrow2 = (b) => b+1;
+
 
 console.log("arrow1:", arrow1(2))
 console.log("arrow2:", arrow1(0))
