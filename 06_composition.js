@@ -8,7 +8,13 @@
  *  - for, foreach, while, do while sont interdits
  */
 
-const concat = null;
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+
+const concat = (tab1, tab2) => (
+    [...tab1,...tab2]
+);
+console.log(concat(arr1, arr2))
 
 /**
  * utiliser l'opérateur de composition ... afin d'ajouter un élément à un tableau
@@ -18,16 +24,23 @@ const concat = null;
  * contrainte:
  * - ne pas utiliser la méthode push
  */
-
-const push = null;
+const val = 4
+const push = (tab, v) => (
+    [...tab, v]
+);
+console.log(push(arr1, val))
 
 /**
  * utiliser l'opérateur de composition ... afin de fusionner 2 objets passés en paramètres
  * 
  * ex: {a: 1, b: 2}, {c: 3, d: 4} => {a: 1, b: 2, c: 3, d: 4}
  */
-
-const merge = null;
+const obj1 = {a: 1, b: 2};
+const obj2 = {c: 3, d: 4};
+const merge = (ob1, ob2) => (
+    {...ob1,...ob2}
+);
+console.log(merge(obj1, obj2))
 
 /**
  * utiliser l'opérateur de composition ... afin de modifier la propriété name de l'objet
@@ -38,7 +51,12 @@ const merge = null;
  *  - interdiction d'utiliser l'opérateur d'affectation "="
  */
 
-const setName = null;
+const obj3 = {name: 'toto'};
+const nom = 'titi'
+const setName = (ob, v) => (
+    {...ob, v}
+);
+console.log(setName(obj3, nom))
 
 // astuce: {...obj} crée une copie de l'objet, c'est un des principes de l'immutabilité et évite les problèmes de référence
 module.exports = {concat, push, merge, setName}
