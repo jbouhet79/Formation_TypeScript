@@ -22,8 +22,8 @@ const user = {
         name: "admin"
     }
 }
-const getGroupName = () => (
-    user.group?.name
+const getGroupName = ({name, group}) => (
+    group?.name
 );
 console.log(getGroupName(user))
 
