@@ -17,6 +17,19 @@
 
 // TODO: Implémenter fetchUsername
 
-export async function fetchUsername(userId: number): Promise<any> {
+export async function fetchUsername(userId: number): Promise<string> {
+  const response = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+  const user = await response.json()
+  return user.username
+
   throw new Error("Not implemented");
 }
+const p = fetchUsername(1).then(r => {
+  console.log(r)
+})
+
+const update = async () => {
+  const res = await fetchUsername(2);
+  console.log(res)
+}
+update()
