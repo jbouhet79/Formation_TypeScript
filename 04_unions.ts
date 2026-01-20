@@ -29,12 +29,32 @@
 export type User = { username: any };
 
 export function formatId(id: string | number): string {
-  return ()
+  return ( typeof id === "string" ? `${id}` : `ID-${id}`)
   throw new Error("Not implemented");
 }
 console.log(formatId(123))
 console.log(formatId("ABC"))
 
-export function getUsername(user: any): any {
+/*
+ * 2. `getUsername(user)` :
+ *    - user: { username: string } | null
+ *    - Retourne le nom d'utilisateur en MAJUSCULES si user n'est pas null
+ *    - Retourne "INVITÉ" si user est null
+ *
+ *    Exemple:
+ *      getUsername({ username: "alice" }) => "ALICE"
+ *      getUsername(null) => "INVITÉ"
+ */
+
+const pers2 = {
+  username: "bob",
+}
+
+export function getUsername(user: { username: string } | null) {
+  return user !== null ? `${user.username.toUpperCase()}` : "INVITE"
+
   throw new Error("Not implemented");
 }
+console.log(getUsername({ username: "alice" }))
+console.log(getUsername(null))
+console.log(getUsername(pers2))
