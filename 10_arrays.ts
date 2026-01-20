@@ -24,10 +24,21 @@
 
 // TODO: Implémenter les fonctions
 
-export function sumNumbers(numbers: any): any {
+export function sumNumbers(numbers: number[]): number {
+  const res = numbers.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0,
+  );
+  return res
   throw new Error("Not implemented");
 }
+console.log(sumNumbers([1, 2, 3]))
+console.log(sumNumbers([]))
+console.log(sumNumbers([10, -5, 3]))
 
-export function filterLongWords(words: any, minLength: any): any {
+export function filterLongWords(words: string[], minLength: number): string[] {
+  return words.filter((word) => word.length >= minLength)
   throw new Error("Not implemented");
 }
+console.log(filterLongWords(["hi", "hello", "world"], 4))
+console.log(filterLongWords(["a", "ab", "abc"], 2))
