@@ -28,9 +28,12 @@
 
 export type User = { username: any };
 
-export function formatId(id: any): any {
+export function formatId(id: string | number): string {
+  return ()
   throw new Error("Not implemented");
 }
+console.log(formatId(123))
+console.log(formatId("ABC"))
 
 export function getUsername(user: any): any {
   throw new Error("Not implemented");

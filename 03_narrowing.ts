@@ -18,6 +18,11 @@
 
 // TODO: Implémenter la fonction
 
+const pers1 = {
+  user: "Alice",
+  groupName: "admin"
+}
+
 export function showUserGroup(user: string, groupName?: string) {
   // return (groupName ? groupName : "pas de groupe");
   return (groupName ?? "pas de groupe");
@@ -26,3 +31,5 @@ export function showUserGroup(user: string, groupName?: string) {
 console.log(showUserGroup("Alice", "admin"))
 console.log(showUserGroup("Bob"))
 console.log(showUserGroup("Charlie", undefined))
+console.log(showUserGroup(pers1.user))
+console.log(showUserGroup(pers1.user, pers1.groupName))
