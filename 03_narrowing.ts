@@ -18,6 +18,11 @@
 
 // TODO: Implémenter la fonction
 
-export function showUserGroup(user: any, groupName: any): any {
+export function showUserGroup(user: string, groupName?: string) {
+  // return (groupName ? groupName : "pas de groupe");
+  return (groupName ?? "pas de groupe");
   throw new Error("Not implemented");
 }
+console.log(showUserGroup("Alice", "admin"))
+console.log(showUserGroup("Bob"))
+console.log(showUserGroup("Charlie", undefined))
