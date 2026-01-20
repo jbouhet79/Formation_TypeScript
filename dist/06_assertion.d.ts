@@ -1,0 +1,20 @@
+/**
+ * Exercice 06: Type Assertion
+ *
+ * Créer une fonction `parseJsonUser(json)` qui:
+ * 1. Parse le JSON passé en paramètre
+ * 2. Utilise une assertion de type pour typer le résultat comme `{ name: string, age: number }`
+ * 3. Retourne l'objet typé
+ *
+ * Exemple:
+ *   parseJsonUser('{"name": "Alice", "age": 25}') => { name: "Alice", age: 25 }
+ *
+ * Note: L'assertion de type permet de dire à TypeScript quel type
+ * on attend du résultat de JSON.parse (qui retourne `any` par défaut).
+ */
+export type JsonUser = {
+    name: string;
+    age: number;
+};
+export declare function parseJsonUser(json: string): JsonUser;
+//# sourceMappingURL=06_assertion.d.ts.map
