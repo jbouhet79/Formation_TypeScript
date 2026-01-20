@@ -5,7 +5,18 @@
  *    - Red = "Red"
  *    - Green = "Green"
  *    - Blue = "Blue"
- *
+ */
+
+// TODO: Définir l'enum Color et implémenter getColorCode
+
+export enum Color {
+  // À compléter
+  Red = "Red",
+  Green = "Green",
+  Blue = "Blue"
+}
+
+/*
  * 2. Créer une fonction `getColorCode(color)` qui retourne le code hexadécimal:
  *    - Color.Red => "#FF0000"
  *    - Color.Green => "#00FF00"
@@ -17,12 +28,10 @@
  *   getColorCode(Color.Blue) => "#0000FF"
  */
 
-// TODO: Définir l'enum Color et implémenter getColorCode
-
-export enum Color {
-  // À compléter
-}
-
 export function getColorCode(color: Color): string {
+  return ( Color.Red === "Red" ? "#FF0000" : Color.Green === "Green" ? "#00FF00" : "#0000FF")
   throw new Error("Not implemented");
 }
+console.log("Red")
+console.log("Blue")
+console.log("Green")
