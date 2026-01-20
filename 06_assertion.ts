@@ -17,6 +17,16 @@
 
 export type JsonUser = { name: string; age: number };
 
+const json1 = `{"name": "Alice","age": "25"}`
+
 export function parseJsonUser(json: string): JsonUser {
+  return JSON.parse(json) as JsonUser
   throw new Error("Not implemented");
 }
+console.log(parseJsonUser('{"name": "Alice", "age": 25}'))
+console.log(parseJsonUser(json1))
+console.log(JSON.parse(json1))
+console.log(typeof JSON.parse(json1).name)
+console.log(typeof JSON.parse(json1).age)
+console.log(typeof parseJsonUser(json1).name)
+console.log(typeof parseJsonUser(json1).age)

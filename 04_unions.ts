@@ -51,7 +51,7 @@ const pers2 = {
 }
 
 export function getUsername(user: { username: string } | null) {
-  return user !== null ? `${user.username.toUpperCase()}` : "INVITE"
+  return user !== null ? `${user.username.toUpperCase()}` : "INVITÉ"
 
   throw new Error("Not implemented");
 }

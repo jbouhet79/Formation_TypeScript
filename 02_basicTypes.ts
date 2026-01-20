@@ -38,7 +38,7 @@ export function getFullName(firstName: string, lastName: string){
 console.log(getFullName("John", "Doe"))
 
 export function greet(name?: string) {
-  return ( name ? `Hello ${name} !` : "Hello!")
+  return ( name ? `Hello, ${name}!` : "Hello!")
   throw new Error("Not implemented");
 }
 console.log(greet())
